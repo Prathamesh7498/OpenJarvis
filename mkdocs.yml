@@ -1,12 +1,12 @@
 site_name: OpenJarvis
 site_url: https://open-jarvis.github.io/OpenJarvis/
 site_description: Personal AI, On Personal Devices
-site_author: OpenJarvis Contributors
+site_author: OpenJarvis
 repo_url: https://github.com/open-jarvis/OpenJarvis
 repo_name: open-jarvis/OpenJarvis
 edit_uri: edit/main/docs/
 
-copyright: Copyright &copy; 2026 OpenJarvis Contributors
+copyright: Copyright &copy; 2026 OpenJarvis
 
 theme:
   name: material
@@ -158,7 +158,6 @@ nav:
       - Track Your Savings: showcase/cost-savings.md
       - Discord Companion: showcase/discord-companion.md
       - Offline Code Reviewer: showcase/coding-assistant.md
-      - Contributing: showcase/CONTRIBUTING.md
   - Tutorials:
       - Overview: tutorials/index.md
       - Deep Research Assistant: tutorials/deep-research.md
