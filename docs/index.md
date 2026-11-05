@@ -20,7 +20,7 @@ Build personal AI that runs on your hardware. Cloud APIs are optional.
 
     ---
 
-    A gallery of real setups — morning briefs that summarize your overnight Slack and email, a Discord companion that knows your calendar, a code reviewer that works at 30,000 feet. Outcome-first, with links to the docs that explain how to build each one.
+    A gallery of real setups — morning briefs that summarize your overnight Slack and email, a code reviewer that works at 30,000 feet. Outcome-first, with links to the docs that explain how to build each one.
 
     [:octicons-arrow-right-24: Browse the Showcase](showcase/index.md)
 
@@ -207,7 +207,7 @@ OpenJarvis is built around five composable layers. Each has a clean interface an
 
     ---
 
-    Contributing guide, extension patterns, roadmap, and changelog.
+    Development setup, extension patterns, roadmap, and changelog.
 
 </div>
 

@@ -1,7 +1,6 @@
-# Contributing Guide
+# Development Guide
 
-This guide covers how to set up a development environment, run tests, and
-contribute code to OpenJarvis.
+This guide covers the development environment, test workflow, and code conventions for OpenJarvis.
 
 ---
 
@@ -362,54 +361,3 @@ class BenchmarkResult:
 - Absolute imports only (`from openjarvis.core.registry import ...`)
 - Sort imports with `ruff` (isort rules enabled)
 - Place `from __future__ import annotations` as the first import
-
----
-
-## PR Guidelines
-
-### Before Submitting
-
-1. **Run the full test suite** and verify no regressions:
-    ```bash
-    uv run pytest tests/ -v
-    ```
-
-2. **Run the linter** and fix all issues:
-    ```bash
-    uv run ruff check src/ tests/
-    ```
-
-3. **Add tests** for new functionality. Place them in the corresponding
-   `tests/` subdirectory (e.g., new engine tests go in `tests/engine/`).
-
-4. **Follow the registry pattern** for any new extensible component.
-
-### Commit Messages
-
-- Use the imperative mood (e.g., "Add FAISS memory backend")
-- Keep the first line under 72 characters
-- Reference relevant issues or PRs
-
-### What Makes a Good PR
-
-- **Focused**: One feature, fix, or refactor per PR
-- **Tested**: Include unit tests that cover the new code paths
-- **Documented**: Update docstrings and documentation pages if adding
-  public API
-- **Backwards compatible**: Avoid breaking existing interfaces without
-  discussion
-
-### Adding a New Primitive Component
-
-When adding a new engine, memory backend, agent, tool, benchmark, or router
-policy:
-
-1. Implement the corresponding ABC
-2. Register with the appropriate `@XRegistry.register("key")` decorator
-3. Add an import in the module's `__init__.py` (with `try/except ImportError`
-   if the component has optional deps)
-4. Add tests in the matching `tests/` subdirectory
-5. Add an entry in `pyproject.toml` under `[project.optional-dependencies]`
-   if the component requires new packages
-
-See the [registry pattern](#registry-pattern) section above for complete examples.
